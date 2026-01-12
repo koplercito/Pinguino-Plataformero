@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2wkk3sh7fn0i"]
 
-[ext_resource type="PackedScene" uid="uid://b1iaqadp53ao7" path="res://placeholder/characters/Pinguino.tscn" id="1_yn6ts"]
+[ext_resource type="PackedScene" uid="uid://b1iaqadp53ao7" path="res://scenes/Pinguino.tscn" id="1_yn6ts"]
 
 [node name="Main" type="Node2D"]
 
