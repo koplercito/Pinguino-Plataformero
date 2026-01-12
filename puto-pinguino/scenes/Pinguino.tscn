@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b1iaqadp53ao7"]
 
-[ext_resource type="Texture2D" uid="uid://dqcvsrtllcmec" path="res://placeholder/characters/Pinguino.png" id="1_jqxm3"]
+[ext_resource type="Texture2D" uid="uid://dqcvsrtllcmec" path="res://assets/characters/Pinguino.png" id="1_jqxm3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6bv0t"]
 radius = 7.0
