@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1iaqadp53ao7"]
+[gd_scene load_steps=4 format=3 uid="uid://b1iaqadp53ao7"]
 
+[ext_resource type="Script" uid="uid://vp3nvctcq3vh" path="res://scripts/pinguino.gd" id="1_g5p2v"]
 [ext_resource type="Texture2D" uid="uid://dqcvsrtllcmec" path="res://assets/characters/Pinguino.png" id="1_jqxm3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6bv0t"]
 radius = 7.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_g5p2v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6bv0t")
