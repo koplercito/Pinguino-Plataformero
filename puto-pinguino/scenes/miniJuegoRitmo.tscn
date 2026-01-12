@@ -1,12 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://bn0o2mlsiqhlc"]
+[gd_scene load_steps=3 format=3 uid="uid://bn0o2mlsiqhlc"]
+
+[ext_resource type="Texture2D" uid="uid://dd6e4d4an0xej" path="res://assets/placeholder/2 TilePrefabs/r1.png" id="1_1fb2a"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2rq71"]
+radius = 16.27882
 
 [node name="MiniJuegoRitmo" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Interactuable" type="StaticBody2D" parent="."]
+position = Vector2(-53, 37)
+scale = Vector2(1.1176088, 1.1176088)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="R1" type="Sprite2D" parent="Interactuable"]
+texture = ExtResource("1_1fb2a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactuable"]
 shape = SubResource("CircleShape2D_2rq71")
+
+[node name="Ritmo" type="Sprite2D" parent="."]
+position = Vector2(-52.000004, -86)
+scale = Vector2(0.8453872, 0.8453872)
+texture = ExtResource("1_1fb2a")
