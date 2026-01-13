@@ -1,9 +1,24 @@
-[gd_scene format=3 uid="uid://b1grsio0t2t1q"]
+[gd_scene load_steps=2 format=3 uid="uid://b1grsio0t2t1q"]
+
+[ext_resource type="Script" uid="uid://b8p4anq5316yj" path="res://scripts/Rythm/gui_rythm.gd" id="1_5wadc"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_5wadc")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

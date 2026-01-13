@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc3rq5kwn4u31"]
+[gd_scene load_steps=4 format=3 uid="uid://bc3rq5kwn4u31"]
 
 [ext_resource type="PackedScene" uid="uid://cirsekjbsd7sn" path="res://scenes/Rythm/key_listener.tscn" id="1_laqgs"]
 [ext_resource type="PackedScene" uid="uid://b1grsio0t2t1q" path="res://scenes/Rythm/gui_rythm.tscn" id="2_lxur6"]
+[ext_resource type="PackedScene" uid="uid://b2arj5kemtk6f" path="res://scenes/Rythm/signals.tscn" id="2_vmbfd"]
 
 [node name="RythmLevel" type="Node2D"]
 
@@ -39,4 +40,11 @@ vframes = 3
 frame = 3
 key_name = "tecla_K"
 
+[node name="Signals" parent="." instance=ExtResource("2_vmbfd")]
+position = Vector2(-158, -88)
+
 [node name="GUI" parent="." instance=ExtResource("2_lxur6")]
+offset_left = -1.0
+offset_top = -70.0
+offset_right = 39.0
+offset_bottom = -30.0

@@ -15,6 +15,10 @@ run/main_scene="uid://d2wkk3sh7fn0i"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Signals="*res://scripts/Rythm/signals.gd"
+
 [display]
 
 window/size/viewport_width=320
