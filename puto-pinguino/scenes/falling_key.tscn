@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw5d3t4dsemci"]
+
+[ext_resource type="Texture2D" uid="uid://c8rdwgiwmrmco" path="res://assets/arrows.webp" id="1_iweoq"]
+[ext_resource type="Script" uid="uid://c845pni0q53j4" path="res://scripts/falling_key.gd" id="2_dbpn1"]
+
+[node name="FallingKey" type="Sprite2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_iweoq")
+hframes = 4
+vframes = 3
+frame = 4
+script = ExtResource("2_dbpn1")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 23.665000000000003
+one_shot = true
+autostart = true
