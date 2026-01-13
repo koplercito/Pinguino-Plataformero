@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc3rq5kwn4u31"]
+[gd_scene load_steps=2 format=3 uid="uid://bc3rq5kwn4u31"]
 
 [ext_resource type="PackedScene" uid="uid://cirsekjbsd7sn" path="res://scenes/key_listener.tscn" id="1_sq5oo"]
-[ext_resource type="PackedScene" uid="uid://dw5d3t4dsemci" path="res://scenes/falling_key.tscn" id="2_6tpcr"]
 
 [node name="RythmLevel" type="Node2D"]
 
@@ -38,6 +37,3 @@ hframes = 4
 vframes = 3
 frame = 3
 key_name = "tecla_K"
-
-[node name="FallingKey" parent="." instance=ExtResource("2_6tpcr")]
-position = Vector2(-30, -100)

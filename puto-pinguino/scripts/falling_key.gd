@@ -17,5 +17,11 @@ func _process(_delta: float) -> void:
 		$Timer.stop()
 
 
-func Setup(pos_x: float):
+func Setup(pos_x: float, target_frame: int):
 	global_position = Vector2(pos_x, init_y_pos)
+	frame = target_frame
+	set_process(true)
+
+
+func _on_destroy_timer_timeout() -> void:
+	queue_free()

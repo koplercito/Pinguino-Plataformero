@@ -12,4 +12,4 @@ func _process(_delta: float) -> void:
 func CreateFallingKey():
 	var fk_inst = falling_key.instantiate()
 	get_tree().get_root().call_deferred("add_child", fk_inst)
-	fk_inst.Setup(global_position.x)
+	fk_inst.Setup(position.x, frame + 4)
