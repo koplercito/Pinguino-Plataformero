@@ -3,6 +3,8 @@ extends Sprite2D
 @export var fallSpeed: float = 1.5
 
 var init_y_pos = -100
+var has_passed: bool = false
+var pass_limits = 120
 
 func _init():
 	set_process(false)
@@ -12,9 +14,10 @@ func _process(_delta: float) -> void:
 	global_position += Vector2(0, fallSpeed)
 	
 	#Con esto determino cuanto se demora en llegar al punto exacto, (1.75)
-	if global_position.y > 100.0 and not $Timer.is_stopped():
-		print($Timer.wait_time - $Timer.time_left)
+	if global_position.y > pass_limits and not $Timer.is_stopped():
+		#print($Timer.wait_time - $Timer.time_left)
 		$Timer.stop()
+		has_passed = true
 
 
 func Setup(pos_x: float, target_frame: int):
