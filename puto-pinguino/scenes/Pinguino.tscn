@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b1iaqadp53ao7"]
+[gd_scene load_steps=7 format=3 uid="uid://b1iaqadp53ao7"]
 
 [ext_resource type="Script" uid="uid://dkrgc6gqi7ksi" path="res://scripts/pinguino2.gd" id="1_dg6c5"]
 [ext_resource type="Texture2D" uid="uid://dqcvsrtllcmec" path="res://assets/characters/Pinguino.png" id="1_jqxm3"]
 [ext_resource type="Script" uid="uid://ddagpmgbaldtx" path="res://scenes/cameraScript.gd" id="3_dg6c5"]
+[ext_resource type="AudioStream" uid="uid://chcps3ttbd778" path="res://assets/music/humorous-loop-275485.mp3" id="4_dna25"]
+[ext_resource type="Script" uid="uid://boc6gfwxcld2t" path="res://scenes/mainMusic.gd" id="5_g7msb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6bv0t"]
 radius = 7.0
@@ -20,3 +22,9 @@ texture = ExtResource("1_jqxm3")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.75, 0.75)
 script = ExtResource("3_dg6c5")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dna25")
+volume_db = 4.039
+autoplay = true
+script = ExtResource("5_g7msb")
