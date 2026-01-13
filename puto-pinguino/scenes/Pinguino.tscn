@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b1iaqadp53ao7"]
 
-[ext_resource type="Script" uid="uid://vp3nvctcq3vh" path="res://scripts/pinguino.gd" id="1_g5p2v"]
+[ext_resource type="Script" uid="uid://dkrgc6gqi7ksi" path="res://scripts/pinguino2.gd" id="1_dg6c5"]
 [ext_resource type="Texture2D" uid="uid://dqcvsrtllcmec" path="res://assets/characters/Pinguino.png" id="1_jqxm3"]
 [ext_resource type="Script" uid="uid://ddagpmgbaldtx" path="res://scenes/cameraScript.gd" id="3_dg6c5"]
 
@@ -9,7 +9,7 @@ radius = 7.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 scale = Vector2(2, 2)
-script = ExtResource("1_g5p2v")
+script = ExtResource("1_dg6c5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_6bv0t")
@@ -18,4 +18,5 @@ shape = SubResource("CircleShape2D_6bv0t")
 texture = ExtResource("1_jqxm3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.75, 0.75)
 script = ExtResource("3_dg6c5")
