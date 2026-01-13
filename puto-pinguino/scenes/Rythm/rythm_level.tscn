@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc3rq5kwn4u31"]
+
+[ext_resource type="PackedScene" uid="uid://cirsekjbsd7sn" path="res://scenes/Rythm/key_listener.tscn" id="1_laqgs"]
+[ext_resource type="PackedScene" uid="uid://b1grsio0t2t1q" path="res://scenes/Rythm/gui_rythm.tscn" id="2_lxur6"]
+
+[node name="RythmLevel" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.0085106, 0.9906977)
+
+[node name="KeyListener" parent="." instance=ExtResource("1_laqgs")]
+position = Vector2(-30, 70)
+scale = Vector2(0.3, 0.3)
+hframes = 4
+vframes = 3
+key_name = "tecla_F"
+
+[node name="KeyListener2" parent="." instance=ExtResource("1_laqgs")]
+position = Vector2(-10, 70)
+scale = Vector2(0.3, 0.3)
+hframes = 4
+vframes = 3
+frame = 1
+key_name = "tecla_G"
+
+[node name="KeyListener3" parent="." instance=ExtResource("1_laqgs")]
+position = Vector2(10, 70)
+scale = Vector2(0.3, 0.3)
+hframes = 4
+vframes = 3
+frame = 2
+key_name = "tecla_J"
+
+[node name="KeyListener4" parent="." instance=ExtResource("1_laqgs")]
+position = Vector2(30, 70)
+scale = Vector2(0.3, 0.3)
+hframes = 4
+vframes = 3
+frame = 3
+key_name = "tecla_K"
+
+[node name="GUI" parent="." instance=ExtResource("2_lxur6")]

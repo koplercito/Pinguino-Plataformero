@@ -1,15 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://dw5d3t4dsemci"]
 
-[ext_resource type="Texture2D" uid="uid://c8rdwgiwmrmco" path="res://assets/arrows.webp" id="1_iweoq"]
-[ext_resource type="Script" uid="uid://c845pni0q53j4" path="res://scripts/falling_key.gd" id="2_dbpn1"]
+[ext_resource type="Texture2D" uid="uid://c8rdwgiwmrmco" path="res://assets/arrows.webp" id="1_m2ye3"]
+[ext_resource type="Script" uid="uid://c845pni0q53j4" path="res://scripts/Rythm/falling_key.gd" id="2_8x3wc"]
 
 [node name="FallingKey" type="Sprite2D"]
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_iweoq")
+texture = ExtResource("1_m2ye3")
 hframes = 4
 vframes = 3
 frame = 4
-script = ExtResource("2_dbpn1")
+script = ExtResource("2_8x3wc")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 23.665000000000003
