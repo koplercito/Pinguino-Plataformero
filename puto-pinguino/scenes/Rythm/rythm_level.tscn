@@ -44,7 +44,7 @@ key_name = "tecla_K"
 position = Vector2(-158, -88)
 
 [node name="GUI" parent="." instance=ExtResource("2_lxur6")]
-offset_left = -1.0
-offset_top = -70.0
-offset_right = 39.0
-offset_bottom = -30.0
+offset_left = -154.0
+offset_top = -88.0
+offset_right = -114.0
+offset_bottom = -48.0
