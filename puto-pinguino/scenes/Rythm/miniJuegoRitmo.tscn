@@ -6,6 +6,7 @@
 radius = 16.27882
 
 [node name="MiniJuegoRitmo" type="Node2D"]
+position = Vector2(1, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
