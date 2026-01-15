@@ -5,6 +5,7 @@ var max_speed = 600
 var acceleration = 30
 var friction = 15
 
+
 func _physics_process(delta):
 	
 	# Add the gravity.
@@ -26,7 +27,9 @@ func _physics_process(delta):
 
 	# Limitar velocidad máxima
 	velocity.x = clamp(velocity.x, -max_speed, max_speed)
-
+	
 	# Aplicar gravedad y movimiento
 	#velocity.y += 10
 	move_and_slide()
+	
+	
