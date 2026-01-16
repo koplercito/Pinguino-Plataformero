@@ -22,6 +22,7 @@ offset_top = 25.0
 offset_right = 3.0
 offset_bottom = 52.0
 scale = Vector2(0.43999892, 0.43999892)
+max_value = 4200.0
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 unique_name_in_owner = true
@@ -30,6 +31,7 @@ offset_left = -48.0
 offset_top = -5.0
 offset_right = 48.0
 offset_bottom = 35.0
+max_value = 4200.0
 texture_under = ExtResource("2_d2do1")
 texture_over = ExtResource("3_0yaec")
 texture_progress = ExtResource("4_d2do1")

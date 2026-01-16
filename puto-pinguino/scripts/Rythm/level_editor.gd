@@ -24,7 +24,7 @@ func _ready() -> void:
 	else:
 		var fk_times = levelInfo.get(currentLevelName).get("fk_times")
 		var fk_times_arr = str_to_var(fk_times)
-		print(fk_times_arr[0])
+		#print(fk_times_arr[0])
 		
 		
 		var counter: int = 0

@@ -7,20 +7,19 @@ extends Sprite2D
 var falling_key_queue = []
 
 
-var perfectPressLimits: float = 15
-var greatPressLimits: float = 50
-var goodPressLimits: float = 60
-var okPressLimits: float = 30
+var perfectPressLimits: float = 40
+var greatPressLimits: float = 28
+var goodPressLimits: float = 18
+var okPressLimits: float = 10
 #lo demas sera un miss
 
-var perfectPressScore: float = 250
+var perfectPressScore: float = 150
 var greatPressScore: float = 100
 var goodPressScore: float = 50
 var okPressScore: float = 20
 
 func _ready() -> void:
 	Signals.createFallingKey.connect(createFallingKey)
-	print(global_position)	
 
 func _process(_delta):
 	
@@ -42,21 +41,26 @@ func _process(_delta):
 			var distanceFromPass = abs(keyToPop.pass_limits - keyToPop.global_position.y)
 			
 			var setScoreText: String = ""
-			if distanceFromPass == perfectPressLimits:
+			if distanceFromPass < perfectPressLimits and distanceFromPass > greatPressLimits:
+					print("PERFECT = " + str(distanceFromPass))
 					Signals.incrementScore.emit(perfectPressScore)
 					setScoreText = "PERFECT"
-			elif distanceFromPass < greatPressLimits:
+			elif distanceFromPass < greatPressLimits and distanceFromPass > goodPressLimits:
+					print("GREAT = " + str(distanceFromPass))
 					Signals.incrementScore.emit(greatPressScore)
-					setScoreText = "PERFECT"
-			elif distanceFromPass < goodPressLimits:
+					setScoreText = "GREAT"
+			elif distanceFromPass < goodPressLimits and distanceFromPass > okPressLimits:
+					print("GOOD = " + str(distanceFromPass))
 					Signals.incrementScore.emit(goodPressScore)
 					setScoreText = "GOOD"
 			elif distanceFromPass < okPressLimits:
+					print("OK = " + str(distanceFromPass))
 					Signals.incrementScore.emit(okPressScore)
 					setScoreText = "OK"
 					
 			else:
 				setScoreText = "MISS"
+				print("MISS = " + str(distanceFromPass))
 				
 			keyToPop.queue_free()
 			var st_inst = score_text.instantiate()
