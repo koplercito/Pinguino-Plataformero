@@ -7,7 +7,7 @@ extends Sprite2D
 var falling_key_queue = []
 
 
-var perfectPressLimits: float = 30
+var perfectPressLimits: float = 15
 var greatPressLimits: float = 50
 var goodPressLimits: float = 60
 var okPressLimits: float = 30
@@ -18,7 +18,14 @@ var greatPressScore: float = 100
 var goodPressScore: float = 50
 var okPressScore: float = 20
 
+func _ready() -> void:
+	Signals.createFallingKey.connect(createFallingKey)
+	print(global_position)	
+
 func _process(_delta):
+	
+	if Input.is_action_just_pressed(key_name):
+		Signals.keyListenerPress.emit(key_name, frame)
 	
 	if falling_key_queue.size() > 0:
 		if falling_key_queue.front().has_passed:
@@ -35,12 +42,12 @@ func _process(_delta):
 			var distanceFromPass = abs(keyToPop.pass_limits - keyToPop.global_position.y)
 			
 			var setScoreText: String = ""
-			if distanceFromPass < perfectPressLimits:
+			if distanceFromPass == perfectPressLimits:
 					Signals.incrementScore.emit(perfectPressScore)
 					setScoreText = "PERFECT"
 			elif distanceFromPass < greatPressLimits:
 					Signals.incrementScore.emit(greatPressScore)
-					setScoreText = "GREAT"
+					setScoreText = "PERFECT"
 			elif distanceFromPass < goodPressLimits:
 					Signals.incrementScore.emit(goodPressScore)
 					setScoreText = "GOOD"
@@ -64,15 +71,17 @@ func _process(_delta):
 
 
 
-func CreateFallingKey():
-	var fk_inst = falling_key.instantiate()
-	get_tree().get_root().call_deferred("add_child", fk_inst)
-	fk_inst.Setup(position.x, frame + 4)
-	
-	falling_key_queue.push_back(fk_inst)
+func createFallingKey(buttonName: String):
+	if buttonName == key_name:
+		var fk_inst = falling_key.instantiate()
+		get_tree().get_root().call_deferred("add_child", fk_inst)
+		fk_inst.Setup(position.x, frame + 4)
+		
+		falling_key_queue.push_back(fk_inst)
 
 
 func _on_random_spawn_timer_timeout() -> void:
-		CreateFallingKey()
+		#createFallingKey()
 		$RandomSpawnTimer.wait_time = randf_range(0.4, 3)
 		$RandomSpawnTimer.start()
+		

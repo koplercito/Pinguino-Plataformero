@@ -4,8 +4,10 @@ extends Sprite2D
 
 var init_y_pos = -100
 var has_passed: bool = false
-var pass_limits = 120
+var pass_limits = 100
 
+func _ready() -> void:
+	pass
 func _init():
 	set_process(false)
 

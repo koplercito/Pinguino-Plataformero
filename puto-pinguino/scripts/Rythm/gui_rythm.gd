@@ -6,8 +6,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Signals.incrementScore.connect(incrementScore)
-	%TextureProgressBar.max_value = 10000
-	%ProgressBar.max_value = 10000
+	%TextureProgressBar.max_value = 3600
+	%ProgressBar.max_value = 3600
 
 func incrementScore(incr: int):
 	score += incr

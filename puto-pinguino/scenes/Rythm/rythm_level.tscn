@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bc3rq5kwn4u31"]
+[gd_scene load_steps=5 format=3 uid="uid://bc3rq5kwn4u31"]
 
 [ext_resource type="PackedScene" uid="uid://cirsekjbsd7sn" path="res://scenes/Rythm/key_listener.tscn" id="1_laqgs"]
 [ext_resource type="PackedScene" uid="uid://b1grsio0t2t1q" path="res://scenes/Rythm/gui_rythm.tscn" id="2_lxur6"]
 [ext_resource type="PackedScene" uid="uid://b2arj5kemtk6f" path="res://scenes/Rythm/signals.tscn" id="2_vmbfd"]
+[ext_resource type="PackedScene" uid="uid://u1q2w5y2c7mh" path="res://scenes/Rythm/LevelEditor.tscn" id="5_2rnm2"]
 
 [node name="RythmLevel" type="Node2D"]
 
@@ -46,3 +47,5 @@ position = Vector2(-158, -88)
 [node name="GUI" parent="." instance=ExtResource("2_lxur6")]
 offset_top = -77.0
 offset_bottom = -37.0
+
+[node name="LevelEditor" parent="." instance=ExtResource("5_2rnm2")]
