@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bw8xou5p5cx7i"]
+
+[node name="ingredient_selection" type="TextureButton"]
+offset_right = 10.0
+offset_bottom = 10.0

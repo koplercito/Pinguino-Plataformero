@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://dpn84vdj48mka"]
+
+[ext_resource type="Script" uid="uid://wdr3pnsygjqy" path="res://scripts/minijuego_papas.gd" id="1_h3p52"]
+[ext_resource type="Texture2D" uid="uid://nufu4k55t64" path="res://assets/minijuego_papas/fondo.png" id="1_ikx80"]
+[ext_resource type="Texture2D" uid="uid://bayjswac3b3rp" path="res://assets/minijuego_papas/iconos/lechuga_icono.png" id="2_pmb8q"]
+[ext_resource type="Texture2D" uid="uid://bt52ii00h3qrr" path="res://assets/minijuego_papas/iconos/carne_icono.png" id="4_w3ngg"]
+[ext_resource type="Texture2D" uid="uid://br8j2jooqt1p8" path="res://assets/minijuego_papas/iconos/tomate_icono.png" id="5_d1qhv"]
+[ext_resource type="Texture2D" uid="uid://btum1mbr82mxw" path="res://assets/minijuego_papas/iconos/hongo_icono.png" id="6_c75jp"]
+[ext_resource type="PackedScene" uid="uid://bw8xou5p5cx7i" path="res://scenes/minijuego_papas/ingredient_selection.tscn" id="7_w3ngg"]
+
+[node name="minijuego_papas" type="Node2D"]
+script = ExtResource("1_h3p52")
+
+[node name="fondo" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_ikx80")
+
+[node name="dialogo" type="Node" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="dialogo"]
+offset_left = 192.0
+offset_top = 40.0
+offset_right = 207.0
+offset_bottom = 52.0
+texture = ExtResource("2_pmb8q")
+
+[node name="TextureRect2" type="TextureRect" parent="dialogo"]
+offset_left = 209.0
+offset_top = 40.0
+offset_right = 224.0
+offset_bottom = 52.0
+texture = ExtResource("4_w3ngg")
+
+[node name="TextureRect3" type="TextureRect" parent="dialogo"]
+offset_left = 226.0
+offset_top = 40.0
+offset_right = 241.0
+offset_bottom = 52.0
+texture = ExtResource("5_d1qhv")
+
+[node name="TextureRect4" type="TextureRect" parent="dialogo"]
+offset_left = 243.0
+offset_top = 40.0
+offset_right = 258.0
+offset_bottom = 52.0
+texture = ExtResource("6_c75jp")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="ingredient_selection" parent="Node" instance=ExtResource("7_w3ngg")]
+offset_left = 71.0
+offset_top = 133.0
+offset_right = 84.53586
+offset_bottom = 142.43246
+scale = Vector2(2.1424572, 2.5444012)
+
+[node name="ingredient_selection3" parent="Node" instance=ExtResource("7_w3ngg")]
+offset_left = 246.00002
+offset_top = 134.0
+offset_right = 256.2686
+offset_bottom = 139.10925
+scale = Vector2(2.1424572, 2.5444012)
+
+[node name="ingredient_selection4" parent="Node" instance=ExtResource("7_w3ngg")]
+offset_left = 250.0
+offset_top = 154.0
+offset_right = 260.26855
+offset_bottom = 159.10925
+scale = Vector2(2.1424572, 2.5444012)
+
+[node name="ingredient_selection5" parent="Node" instance=ExtResource("7_w3ngg")]
+offset_left = 273.0
+offset_top = 165.0
+offset_right = 280.0013
+offset_bottom = 170.10925
+scale = Vector2(2.1424572, 2.5444012)
+
+[node name="ingredient_selection2" parent="Node" instance=ExtResource("7_w3ngg")]
+offset_left = 71.0
+offset_top = 160.0
+offset_right = 82.20209
+offset_bottom = 166.68134
+scale = Vector2(2.1424572, 2.5444012)
+
+[node name="plate_area" parent="Node" instance=ExtResource("7_w3ngg")]
+offset_left = 120.0
+offset_top = 151.0
+offset_right = 159.20732
+offset_bottom = 160.8255
+scale = Vector2(2.1424572, 2.5444012)
